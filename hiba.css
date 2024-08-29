@@ -1,0 +1,167 @@
+body {  
+      margin: 0; 
+       font-family: Arial, Helvetica, sans-serif;
+    }
+.navbar {  
+      background-color: rgb(56, 93, 162);   
+       display: flex;
+    align-items: center; 
+       justify-content: space-between;
+       padding: 10px; 
+          position: relative;
+    flex-wrap: wrap; /* يسمح للعنصر بالتفاف عند الحاجة */}
+    .navbar .logo img {
+    width: 80px;   
+     height: 80px;  
+       padding: 5px;
+}.menu-btn { 
+    display: none; /* إخفاء الزر في الشاشات الكبيرة */    
+     background: none; 
+    border: none;    
+     cursor: pointer; 
+    position: relative;   
+      z-index: 1001; 
+}
+.menu-icon {   
+    
+display: flex; 
+    flex-direction: column;  
+       justify-content: center; 
+    align-items: center;   
+      width: 30px; 
+    height: 25px; }
+.bar { 
+    display: block;  
+       width: 30px; 
+    height: 3px;   
+      background-color: #000; /* تغيير اللون إلى الأسود */ 
+    margin: 5px 0;  
+       transition: all 0.3s ease; 
+}
+.menu-btn.active .bar1 {  
+       transform: rotate(45deg); 
+    position: absolute;   
+      top: 10px; 
+    left: 10px;
+ }
+.menu-btn.active .bar2 {  
+    opacity: 0; 
+}
+.menu-btn.active .bar3 {  
+    transform: rotate(-45deg);   
+       position: absolute;  
+    top: 10px;  
+    left: 10px; 
+ }
+
+.list {
+    list-style: none;
+    display: flex;  
+      margin: 0;
+    padding: 0;}
+    .navbar .nav-itm {
+    padding: 10px 15px; 
+       margin-left: 10px;}
+.navbar .list a {   
+     text-decoration: none;
+         color: black;  
+           font-size: 25px;
+}
+.navbar .nav-itm:hover { 
+       background-color: rgb(255, 255, 255);
+}/* تصميم متجاوب للشاشات المتوسطة والصغيرة */
+
+section{
+    padding: 25px;
+}
+.news{
+    text-align: center;
+}
+.rel h1{
+    text-align: center;
+}
+.complaints h2{
+    text-align: center;
+}
+.contact h2{
+    text-align: center;
+}
+.contact p{
+    text-align: center;
+}
+
+@media (max-width: 890px) {  
+       .menu-btn {  
+           display: block; /* عرض الزر على الشاشات الصغيرة */ 
+}  
+.list {           
+     display: none; /* إخفاء القائمة على الشاشات الصغيرة */ 
+    flex-direction: column;  
+       width: 100%; 
+    text-align: center;   
+    background-color: rgb(246, 246, 248); 
+    position: absolute;    
+    bottom: 0; /* تحديد الموضع من الأسفل */ 
+    transform: translateY(100%); /* تحريك العنصر إلى أسفل */   
+    right: 0; 
+    z-index: 1000; } 
+.list.active {   
+      display: flex; /* عرض القائمة عند النقر على الزر */ 
+}
+ }
+ @media screen and (max-width: 480px) { 
+       .navbar {
+        justify-content: flex-start; 
+       }   
+        .navbar .logo {
+        margin-right: auto; 
+       }       
+        body {
+            background-color: rgb(253, 254, 255); 
+               }
+        .navbar{      
+                  background-color: rgb(28, 61, 162);
+        }       
+         .navbar list a {
+            color: #000;   
+             }
+        .navbar .nav-itm:hover{     
+                   background-color: rgb(168, 196, 196);
+        }  
+          .list a {
+        font-size: 20px; /* تقليل حجم النص لتناسب الشاشات الأصغر */  
+    
+    }
+    .navbar .nav-itm {    
+            padding: 10px 0; /* تقليل التباعد بين العناصر */    
+        }
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+  }
+  .footer {
+      background-color: #003366; /* لون الخلفية */
+      color: white; /* لون النص */
+      text-align: center;
+      padding: 20px 0;
+  }
+  .footer .social-icons {
+      margin: 20px 0;
+  }
+  .footer .social-icons a {
+      color: white; /* لون الأيقونات */
+      margin: 0 15px; /* المسافة بين الأيقونات */
+      font-size: 24px; /* حجم الأيقونات */
+      text-decoration: none; /* إزالة الخط من الروابط */
+      transition: color 0.3s; /* تأثير التغيير في اللون */
+  }
+  .footer .social-icons a:hover {
+      color: #66b3ff; /* لون الأيقونات عند التمرير */
+  }
+  .footer p {
+      margin: 0; /* إزالة الهوامش للنص */
+  }
+
+
